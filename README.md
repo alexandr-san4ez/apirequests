@@ -18,6 +18,8 @@ Install
 Usage
 -----
 ```python
+import apirequests
+
 class GitHub(apirequests.Client):
     silent = False
     def __init__(self):

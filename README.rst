@@ -23,6 +23,8 @@ Usage
 
 .. code:: python
 
+    import apirequests
+
     class GitHub(apirequests.Client):
         silent = False
         def __init__(self):
