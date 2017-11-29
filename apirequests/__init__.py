@@ -30,7 +30,7 @@ class Client(requests.Session):
         """
         Returns the full path with the host name
         """
-        return self.host + '/' + path.lstrip('/')
+        return self.host + '/' + path.lstrip('/') if path else self.host
 
     def request(self, method, url, **kwargs):
         response = super(Client, self).request(method, self._url(url), **kwargs)

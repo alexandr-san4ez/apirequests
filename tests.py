@@ -23,6 +23,11 @@ class TestClient(unittest.TestCase):
         self.assertEqual('localhost/api/path', c._url('path'))
         self.assertEqual('localhost/api/path/', c._url('/path/'))
 
+        c = Client('localhost')
+        self.assertEqual('localhost/', c._url('/'))
+        self.assertEqual('localhost', c._url(''))
+        self.assertEqual('localhost', c._url(None))
+
     @patch('requests.Session.request')
     def test_request(self, request_mock):
         c = Client('localhost')
