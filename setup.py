@@ -8,7 +8,7 @@ requirements = tuple(map(lambda x: x.strip(), requirements))
 
 setup(
     name='apirequests',
-    version='0.0.7',
+    version='0.0.8',
     packages=find_packages(),
     author='san4ez',
     url='https://github.com/alexandr-san4ez/apirequests',
